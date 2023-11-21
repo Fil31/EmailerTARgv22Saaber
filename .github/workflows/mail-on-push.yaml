@@ -14,7 +14,7 @@ jobs:
           password: ${{secrets.MAIL_PASSWORD}}
           subject: OLEG PIDORAS
           body: Email test from ${{github.repository}} which is owned by ${{github.event.pusher.name}}.
-          to: lolid76@gmail.com
+          to: jyri.vaitmaa@tthk.ee
           from: Github Actions
 
   Explore-GitHub-Actions:

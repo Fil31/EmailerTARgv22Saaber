@@ -2,20 +2,20 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions ??
 on: [push]
 jobs:
-	mail-on-push:
-		runs on: ubuntu-latest
-		steps:
-			- name: Send mail
-			  uses: dawidd6/action-send-mail@v3
-			  with:
-			    server_address: smtp.gmail.com
-				server_port: 465
-				username: ${{secrets.MAIL_USERNAME}}
-				password: ${{secrets.MAIL_PASSWORD}}
-				subject: OLEG PIDORAS
-				body: Email test from ${{github.repository}}.which is owned by ${{github.event.pusher.name}}.
-				to: lolid76@gmail.com
-				from: Github Actions
+  mail-on-push:
+	runs on: ubuntu-latest
+	steps:
+	  - name: Send mail
+	    uses: dawidd6/action-send-mail@v3
+		with:
+		  server_address: smtp.gmail.com
+		  server_port: 465
+		  username: ${{secrets.MAIL_USERNAME}}
+		  password: ${{secrets.MAIL_PASSWORD}}
+		  subject: OLEG PIDORAS
+		  body: Email test from ${{github.repository}}.which is owned by ${{github.event.pusher.name}}.
+		  to: lolid76@gmail.com
+		  from: Github Actions
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
